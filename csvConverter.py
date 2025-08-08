@@ -33,7 +33,7 @@ def export_hara_to_csv(json_data):
 
   file_path = "hara_data\HARA_database.csv"
   isExisting = os.path.exists(file_path)
-  with open(file_path, "a", newline = "", encoding="utf-8") as file:
+  with open(file_path, "a", newline = "\n", encoding="utf-8") as file:
     writer = csv.writer(file)
     #print(os.path.exists(file_path))
     if (not isExisting) or (file.tell == 0):
