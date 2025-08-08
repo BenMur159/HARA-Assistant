@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+
+
+  background-image: url("images/HARA_assistant_background_no_text.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hara-explanation {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.hara-explanation-header{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.hara-explanation-listing{
+  padding-left: 1.5em;
+  text-indent: -1em;
+}
+
+.item-definition-textarea {
+  width: 500px;
+  height: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+td {
+  padding: 5px;
+}
+
+.hara-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 1em;
+}
+
+.hara-text {
+  resize: both;
+  min-height: 60px;
+  min-width: 120px;
+}
+.hara-number {
+  width: 30px;
+  text-align: c;
+}
+
+th {
+  background-color: #d3ccccf5;
+}
+
+td {
+  background-color: #ddf8f8f8;
+}
+
+
+.hara-top-header{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hara-header {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.group-divider {
+  border-right: 3px solid #000;;
+}
+
+.edit-row-button,
+.save-row-button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.save-row-button {
+  margin-top: 3px;
+}
+
+.asil {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  cursor: default;
+}
