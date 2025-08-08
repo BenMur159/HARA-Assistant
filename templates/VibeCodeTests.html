@@ -1,0 +1,43 @@
+<!-- Multiple input fields -->
+<input type="text" class="custom-input" placeholder="Right-click me">
+<input type="text" class="custom-input" placeholder="Right-click me too">
+<input type="text" class="custom-input" placeholder="And me!">
+
+<!-- Shared context menu -->
+<ul id="customMenu" style="display: none; position: absolute; background: white; border: 1px solid gray; list-style: none; padding: 5px; z-index: 1000;">
+  <li class="menu-option">ASIL A</li>
+  <li class="menu-option">ASIL B</li>
+  <li class="menu-option">ASIL C</li>
+  <li class="menu-option">ASIL D</li>
+</ul>
+
+<script>
+  const menu = document.getElementById("customMenu");
+  let targetInput = null; // <-- track which input was right-clicked
+
+  // Attach to all input fields with class 'custom-input'
+  document.querySelectorAll(".custom-input").forEach(input => {
+    input.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      targetInput = e.target;
+      menu.style.top = `${e.pageY}px`;
+      menu.style.left = `${e.pageX}px`;
+      menu.style.display = "block";
+    });
+  });
+
+  // Hide menu on any click
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+  });
+
+  // Apply clicked option to the last-clicked input
+  document.querySelectorAll(".menu-option").forEach(option => {
+    option.addEventListener("click", () => {
+      if (targetInput) {
+        targetInput.value = option.textContent;
+      }
+      menu.style.display = "none";
+    });
+  });
+</script>

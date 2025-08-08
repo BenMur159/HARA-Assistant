@@ -1,0 +1,20 @@
+Item definition:
+{{ item_definition }}
+
+Function:
+{{ hazard_function }}
+
+Assumed hazard:
+{{ assumed_hazard }}
+
+General driving situation:
+{{ general_driving_situation }}
+
+General enviromental conditions:
+{{ general_enviromental_conditions }}
+
+Hazardous Event:
+{{ hazardous_event }}
+
+Controllability Level:
+{{ controllability }}

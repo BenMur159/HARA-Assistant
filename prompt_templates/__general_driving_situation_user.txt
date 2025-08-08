@@ -1,0 +1,8 @@
+Item definition:
+{{ item_definition }}
+
+Function:
+{{ hazard_function }}
+
+Assumed Hazard:
+{{ assumed_hazard }}

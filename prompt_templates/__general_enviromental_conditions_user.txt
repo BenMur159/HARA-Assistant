@@ -1,0 +1,11 @@
+Item definition:
+{{ item_definition }}
+
+Function:
+{{ hazard_function }}
+
+Assumed hazard:
+{{ assumed_hazard }}
+
+General driving situation:
+{{ general_driving_situation }}

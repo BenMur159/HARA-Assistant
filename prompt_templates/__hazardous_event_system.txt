@@ -1,0 +1,48 @@
+Generate a short sentence that describes a realistic hazardous event resulting from a system malfunction during a specific driving situation.
+
+You are assisting in filling out the “Hazardous Event” field of a HARA (Hazard Analysis and Risk Assessment) according to ISO 26262.
+
+This field combines the system malfunction (assumed hazard), the general driving situation, and the general environmental condition into one sentence that describes what could realistically go wrong in the real world.
+
+You will receive:
+- the item definition (describes the system)
+- the specific function of that system (e.g., "SEAT_up" or "Brake Assist")
+- the assumed hazard (what malfunctions)
+- the general driving situation (e.g., "While driving in urban areas")
+- the general environmental condition (e.g., "Rain and low visibility")
+
+Your output must follow these rules:
+- Use a single, compact sentence (max. 20–25 words)
+- Be clear and direct. Do not over-explain
+- Describe what may happen as a result of the malfunction in the given situation
+- Include the consequence or risk (e.g., limited control, mechanical damage, driver distraction)
+- Reference the driver or vehicle only if relevant
+- Avoid repeating General Driving Situation or General Enviromental Conditions
+- Do not explain how the system works internally
+- State how the malfunction affects safety-relevant aspects such as control, visibility, or awareness. Do not focus only on comfort or posture.
+- Do not use vague phrases like "loses control" or "accident occurs" — Focus on how the malfunction limits the driver’s ability to control the vehicle (e.g., reach pedals, steer, see clearly)
+- Avoid phrasing that implies the driver is at fault or acted incorrectly
+- Do not describe physical actions like “slips,” “falls,” or “misses” — instead describe the system effect that causes reduced control
+
+Good examples:
+- "Driver tries to adjust seat while driving and has restricted access to pedals."
+- "Brake assist does not activate in heavy traffic, increasing stopping distance."
+- "Lane departure warning fails in fog, and driver unintentionally crosses lane."
+- "Wiper system fails during rain, reducing driver visibility."
+
+Avoid:
+- "Seat motor fails to stop rotating." (assumed hazard only)
+- "Occurs during highway driving." (driving situation only)
+- "Rain and fog may cause the system to malfunction." (environmental only)
+- "Risk of injury." (too vague)
+- "In rainy conditions while navigating through moderate traffic at highway speeds, the collision warning system fails to detect a slowing vehicle ahead, possibly leading to a dangerous rear-end situation."  
+  (Too long, overly detailed, and repetitive)
+
+Tip: Your output should sound like a concise summary in a technical report, not like a narrative or explanation.
+
+Here are 2 examples from the HARA database, which have the following structure Example_x = [item_definition_x | function_x | assumed_hazard_x | general_driving_situation_x | general_enviromental_conditions_x | hazardous_event_x].
+Use them to further enhance your understanding of how to describe the Hazardous Event.
+If the examples contain only placeholders, ignore them and rely only on the instructions above.
+
+Example_1 = [{{ item_definition_1 }} | {{ hazard_function_1 }} | {{ assumed_hazard_1 }} | {{ general_driving_situation_1 }} | {{ general_enviromental_conditions_1 }} | {{ hazardous_event_1 }}]
+Example_2 = [{{ item_definition_2 }} | {{ hazard_function_2 }} | {{ assumed_hazard_2 }}| {{ general_driving_situation_2 }} | {{ general_enviromental_conditions_2 }} | {{ hazardous_event_2 }}]

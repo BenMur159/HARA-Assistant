@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HARA Table</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='hara.css') }}">
+  
+</head>
+<body>
+
+<h2>Item Defininition</h2>  
+<textarea class="item-definition-textarea js-item-definition-textarea"></textarea>
+<button class="js-item-definition-save-button">Save</button>
+
+<div class="hara-explanation">
+  <p class="hara-explanation-header">USEAGE GUIDE FOR AI SUPPORT</p>
+  <p>1. Start with Item Definition</p>
+  <p class="hara-explanation-listing"> – Describe all key functions of the item (see example).</p>
+  <p>2. Fill Hazard Description (Left → Right)</p>
+  <p class="hara-explanation-listing"> – Each field depends on the previous one.</p>
+  <p class="hara-explanation-listing"> – Complete all fields before using AI suggestions in later sections.</p>
+  <p>3. Hazard Classification & Safety Goal desctiption</p>
+  <p class="hara-explanation-listing"> – AI suggestions here require a complete Hazard Description & ASIL for Safety Goal desctiption.</p>
+</div>
+
+<h2>HARA Table</h2>
+
+<table id="hara-table">
+  <thead>
+    <tr>
+      <th colspan="7" class="hara-top-header group-divider">Hazard desctiption</th>
+      <th colspan="7" class="hara-top-header group-divider">Hazard classification (without assumption)</th>
+      <th colspan="4" class="hara-top-header group-divider">Safety goal desctiption</th>
+    </tr>
+    </tr>
+    <tr>
+      <th></th>
+      <th class="hara-header">Hazard ID</th>
+      <th class="hara-header">Function</th>
+      <th class="hara-header">Assumed Hazard</th>
+      <th class="hara-header">General Driving Situation</th>
+      <th class="hara-header">General Enviromental Conditions</th>
+      <th class="hara-header group-divider">Hazardous Event</th>
+      <th class="hara-header">Severity (S)</th>
+      <th class="hara-header">Justification for S</th>
+      <th class="hara-header">Exposure (E)</th>
+      <th class="hara-header">Justification for E</th>
+      <th class="hara-header">Controllability (C)</th>
+      <th class="hara-header">Justification for C</th>
+      <th class="hara-header group-divider">Resulting ASIL</th>
+      <th class="hara-header">SG #</th>
+      <th class="hara-header">Safety Goal</th>
+      <th class="hara-header">Safe State</th>
+      <th class="hara-header group-divider">Fault Tolerant time [ms]</th>
+    </tr>
+  </thead>
+  <tbody class="js-hara-input-table">
+
+  </tbody>
+</table>
+
+<button class="js-add-row-button">Add Empty Row</button>
+<button class="js-remove-row-button">Remove Last Row</button>
+<button class="js-export-hara-to-csv-button">Export HARA to CSV</button>
+<button class="js-add-hara-to-database-button">Add HARA to Database</button>
+<!--<button class="js-test-button">TEST</button>-->
+
+<!--
+<ul id="custom-context-menu" style="display: none; position: absolute; z-index: 1000; background: white; border: 1px solid #ccc; list-style: none; padding: 0;">
+  <li data-value="This is Option A" style="padding: 8px; cursor: pointer;">Option A</li>
+  <li data-value="This is Option B" style="padding: 8px; cursor: pointer;">Option B</li>
+  <li data-value="This is Option C" style="padding: 8px; cursor: pointer;">Option C</li>
+</ul>
+-->
+
+
+<!-- <script src="../static/hara.js"></script> -->
+<script type="module" src="{{ url_for('static', filename='hara.js') }}" defer></script>
+
+</body>
+</html>

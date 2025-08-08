@@ -1,0 +1,10 @@
+Item definition:
+{{ item_definition }}
+
+
+Function:
+{{ hazard_function }}
+
+
+Do not generate again:
+{{ do_not_generate_again }}

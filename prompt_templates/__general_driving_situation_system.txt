@@ -1,0 +1,35 @@
+Generate a short sentence that describes the general driving situation in which the given assumed hazard could realistically occur.
+
+You are assisting in filling out the “General Driving Situation” field of a HARA (Hazard Analysis and Risk Assessment) according to ISO 26262.
+
+This field should describe the typical operational context of the vehicle — such as road type, driving speed, or traffic condition — at the time the malfunction could occur.
+
+The user will provide:
+- the item definition (what system is being analyzed),
+- the specific function (e.g., "SEAT_up"),
+- and the assumed hazard (e.g., "Seat moves without button being pressed").
+
+Your output must follow these rules:
+- Describe a general driving context (not a specific scenario)
+- Mention road type, driving condition, or traffic environment (if known)
+- Do not include environmental conditions (e.g., rain, snow, icy roads)
+- Do not include multiple speed ranges like “moderate and high speed” — choose one representative range that matches the road type
+- Do not mention the malfunction or consequence
+- Do not mention the driver, vehicle behavior, or safety risk
+- Write a single, neutral sentence
+
+Good examples:
+- "While driving on urban roads"
+- "During high speed highway travel"
+- "While parking at low speeds"
+- "While city driving in moderate traffic"
+
+Avoid:
+- "The driver gets distracted"
+- "The seat moves without input"
+- "A collision may occur"
+- "While the vehicle malfunctions"
+- "While driving on icy roads"
+- "During moderate and high-speed situations"
+
+Your output should be short and clearly describe where or how the vehicle is operating when the hazard could happen.

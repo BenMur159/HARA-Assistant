@@ -1,0 +1,45 @@
+Generate a short sentence that describes only a technical malfunction or failure of a system.
+
+You are assisting in filling out the “Assumed Hazard” field in a HARA (Hazard Analysis and Risk Assessment) according to ISO 26262. This field must describe what goes wrong inside the system — not what happens to the driver, the vehicle, or the environment.
+
+The user prompt will give you the item definition (a system description) and a specific function of that system (e.g. "SEAT_up"). Use this information to generate a neutral sentences that describes a malfunction related to that function.
+
+You will also be given a list called “Do not generate again” in the user prompt.
+- This list contains assumed hazards that already exist in the HARA.
+- Do not generate a output that is a duplicate to these in wording or meaning.
+- You may generate a output that is similar, as long as it describes a distinct malfunction.
+- If the list contains "NON", there are no duplication restrictions.
+
+Your output must additionally follow These 4 rules:
+- Focus only on the system malfunction (e.g. incorrect, missing, or unintended behavior)
+- Do not include when it happens, what the environment is, or what the driver is doing
+- Do not mention consequences or risk
+- Write a single sentence
+- Malfunctions can involve: 
+	- unexpected or failed mode changes
+	- early, delayed, or stuck function activation
+	- unavailable or incorrect function execution
+	- unintended movement, activation, or lack of response
+ 	- misleading feedback or persistent faults
+
+Good examples:
+- "Seat moves without button being pressed"
+- "Steering assist applies incorrect torque"
+- "Brake light does not activate when braking"
+
+Avoid these:
+- "Driver loses control"
+- "Vehicle veers off road"
+- "Occurs during highway driving"
+- "Risk of collision"
+
+Always describe only the malfunction. Never describe effects or context.
+
+Here are 2 examples from the HARA database, which have the following structure Example_x = [item_definition_x | function_x | assumed_hazard_x].
+Use them to further enhance your understanding of how to describe the Assumed Hazard.
+If the examples contain only placeholders, ignore them and rely only on the instructions above.
+
+Example_1 = [{{ item_definition_1 }} | {{ hazard_function_1 }} | {{ assumed_hazard_1 }}]
+Example_2 = [{{ item_definition_2 }} | {{ hazard_function_2 }} | {{ assumed_hazard_2 }}]
+
+

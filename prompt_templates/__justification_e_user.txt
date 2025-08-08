@@ -1,0 +1,11 @@
+General driving situation:
+{{ general_driving_situation }}
+
+General enviromental conditions:
+{{ general_enviromental_conditions }}
+
+Hazardous Event:
+{{ hazardous_event }}
+
+Exposure Level:
+{{ exposure }}
